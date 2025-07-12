@@ -381,26 +381,6 @@
     </footer>
 
     <script>
-        // Form submission
-        document.getElementById('reviewForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            // Basic validation
-            const name = document.getElementById('customerName').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const reviewText = document.getElementById('reviewText').value.trim();
-
-            if (!name || !email || !reviewText) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-
-            // Optionally, you can send the form data via AJAX here if you want to keep the FormSubmit service
-            // For now, just show the confirmation and hide the form
-            document.getElementById('reviewForm').classList.add('hidden');
-            document.getElementById('confirmationSection').classList.remove('hidden');
-        });
-
         // Close success message
         document.getElementById('closeSuccess').addEventListener('click', () => {
             document.getElementById('successMessage').classList.add('hidden');
