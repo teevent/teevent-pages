@@ -178,6 +178,9 @@
                 <div class="glass-effect rounded-3xl p-8 md:p-12">
                     <form id="reviewForm" class="space-y-6" action="https://formsubmit.co/el/botufe" method="POST">
                         <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="reviewpage.html">
+                        <input type="hidden" name="_subject" value="New Review Submission - Teevent">
+                        <input type="hidden" name="_template" value="table">
                         <!-- Personal Information -->
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
@@ -381,6 +384,22 @@
     </footer>
 
     <script>
+        // Form submission handling
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            // Don't prevent default - let the form submit
+            // Just show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+            submitBtn.disabled = true;
+            
+            // Reset button after a delay (in case of errors)
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 5000);
+        });
+
         // Close success message
         document.getElementById('closeSuccess').addEventListener('click', () => {
             document.getElementById('successMessage').classList.add('hidden');
