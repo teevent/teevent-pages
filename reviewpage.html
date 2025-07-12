@@ -140,14 +140,15 @@
     <section class="py-20 feedback-hero-bg relative overflow-hidden">
         <!-- Top Navigation -->
         <div class="absolute top-6 left-0 right-0 z-20">
-        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="container mx-auto px-4 flex justify-between items-center">
                 <img src="teevent-logo/footer-logo.png" alt="Teevent" class="h-12">
-                <a href="index.html" class="glass-effect rounded-full px-6 py-3 text-white hover:text-gray-300 transition-all duration-300 hover:scale-105">
+                <a href="index.html"
+                    class="glass-effect rounded-full px-6 py-3 text-white hover:text-gray-300 transition-all duration-300 hover:scale-105">
                     <i class="fas fa-home"></i>
                 </a>
             </div>
         </div>
-        
+
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
         <div class="hero-glow absolute inset-0"></div>
         <div class="container mx-auto px-4 relative z-10">
@@ -176,11 +177,9 @@
         <div class="container mx-auto px-4">
             <div class="max-w-2xl mx-auto">
                 <div class="glass-effect rounded-3xl p-8 md:p-12">
+                    <!-- Form action updated to the new FormSubmit endpoint -->
                     <form id="reviewForm" class="space-y-6" action="https://formsubmit.co/el/botufe" method="POST">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="reviewpage.html">
-                        <input type="hidden" name="_subject" value="New Review Submission - Teevent">
-                        <input type="hidden" name="_template" value="table">
                         <!-- Personal Information -->
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
@@ -223,57 +222,71 @@
                         <div>
                             <label class="block text-sm font-semibold mb-4">What did you order from us? *</label>
                             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                <label class="glass-effect rounded-xl p-4 cursor-pointer hover:bg-gray-600 transition-all duration-300 group">
+                                <label
+                                    class="glass-effect rounded-xl p-4 cursor-pointer hover:bg-gray-600 transition-all duration-300 group">
                                     <div class="flex items-center space-x-3 h-full">
-                                        <input type="checkbox" name="Products" value="T-Shirts" class="form-checkbox text-pink-400">
+                                        <input type="checkbox" name="Products" value="T-Shirts"
+                                            class="form-checkbox text-pink-400">
                                         <div class="flex-1 flex items-center">
                                             <div class="font-semibold text-sm">T-Shirts</div>
                                         </div>
                                     </div>
                                 </label>
-                                <label class="glass-effect rounded-xl p-4 cursor-pointer hover:bg-gray-600 transition-all duration-300 group">
+                                <label
+                                    class="glass-effect rounded-xl p-4 cursor-pointer hover:bg-gray-600 transition-all duration-300 group">
                                     <div class="flex items-center space-x-3 h-full">
-                                        <input type="checkbox" name="Products" value="Lanyards" class="form-checkbox text-pink-400">
+                                        <input type="checkbox" name="Products" value="Lanyards"
+                                            class="form-checkbox text-pink-400">
                                         <div class="flex-1 flex items-center">
                                             <div class="font-semibold text-sm">Lanyards</div>
                                         </div>
                                     </div>
                                 </label>
-                                <label class="glass-effect rounded-xl p-4 cursor-pointer hover:bg-gray-600 transition-all duration-300 group">
+                                <label
+                                    class="glass-effect rounded-xl p-4 cursor-pointer hover:bg-gray-600 transition-all duration-300 group">
                                     <div class="flex items-center space-x-3 h-full">
-                                        <input type="checkbox" name="Products" value="Canvas Bags" class="form-checkbox text-pink-400">
+                                        <input type="checkbox" name="Products" value="Canvas Bags"
+                                            class="form-checkbox text-pink-400">
                                         <div class="flex-1 flex items-center">
                                             <div class="font-semibold text-sm">Canvas Bags</div>
                                         </div>
                                     </div>
                                 </label>
-                                <label class="glass-effect rounded-xl p-4 cursor-pointer hover:bg-gray-600 transition-all duration-300 group">
+                                <label
+                                    class="glass-effect rounded-xl p-4 cursor-pointer hover:bg-gray-600 transition-all duration-300 group">
                                     <div class="flex items-center space-x-3 h-full">
-                                        <input type="checkbox" name="Products" value="Keychains" class="form-checkbox text-pink-400">
+                                        <input type="checkbox" name="Products" value="Keychains"
+                                            class="form-checkbox text-pink-400">
                                         <div class="flex-1 flex items-center">
                                             <div class="font-semibold text-sm">Keychains</div>
                                         </div>
                                     </div>
                                 </label>
-                                <label class="glass-effect rounded-xl p-4 cursor-pointer hover:bg-gray-600 transition-all duration-300 group">
+                                <label
+                                    class="glass-effect rounded-xl p-4 cursor-pointer hover:bg-gray-600 transition-all duration-300 group">
                                     <div class="flex items-center space-x-3 h-full">
-                                        <input type="checkbox" name="Products" value="Stickers" class="form-checkbox text-pink-400">
+                                        <input type="checkbox" name="Products" value="Stickers"
+                                            class="form-checkbox text-pink-400">
                                         <div class="flex-1 flex items-center">
                                             <div class="font-semibold text-sm">Stickers</div>
                                         </div>
                                     </div>
                                 </label>
-                                <label class="glass-effect rounded-xl p-4 cursor-pointer hover:bg-gray-600 transition-all duration-300 group">
+                                <label
+                                    class="glass-effect rounded-xl p-4 cursor-pointer hover:bg-gray-600 transition-all duration-300 group">
                                     <div class="flex items-center space-x-3 h-full">
-                                        <input type="checkbox" name="Products" value="Badges" class="form-checkbox text-pink-400">
+                                        <input type="checkbox" name="Products" value="Badges"
+                                            class="form-checkbox text-pink-400">
                                         <div class="flex-1 flex items-center">
                                             <div class="font-semibold text-sm">Badges</div>
                                         </div>
                                     </div>
                                 </label>
-                                <label class="glass-effect rounded-xl p-4 cursor-pointer hover:bg-gray-600 transition-all duration-300 group">
+                                <label
+                                    class="glass-effect rounded-xl p-4 cursor-pointer hover:bg-gray-600 transition-all duration-300 group">
                                     <div class="flex items-center space-x-3 h-full">
-                                        <input type="checkbox" name="Products" value="Other" class="form-checkbox text-pink-400">
+                                        <input type="checkbox" name="Products" value="Other"
+                                            class="form-checkbox text-pink-400">
                                         <div class="flex-1 flex items-center">
                                             <div class="font-semibold text-sm">Other</div>
                                         </div>
@@ -293,14 +306,16 @@
                         <!-- Permission to Use Review -->
                         <div class="glass-effect rounded-xl p-4">
                             <p class="text-sm opacity-75">
-                                By clicking submit, I give permission for Teevent to use my review and name for marketing purposes on their website and social media.
+                                By clicking submit, I give permission for Teevent to use my review and name for marketing
+                                purposes on their website and social media.
                             </p>
                         </div>
 
                         <!-- Name Display Preference -->
                         <div class="glass-effect rounded-xl p-4">
                             <label class="flex items-start space-x-3 cursor-pointer">
-                                <input type="checkbox" id="hideName" name="Hide Name" class="mt-1 form-checkbox text-pink-400">
+                                <input type="checkbox" id="hideName" name="Hide Name"
+                                    class="mt-1 form-checkbox text-pink-400">
                                 <span class="text-sm">Do not show my name when my review is used.</span>
                             </label>
                         </div>
@@ -320,7 +335,8 @@
                         <div class="glass-effect rounded-3xl p-8 max-w-md mx-auto">
                             <i class="fas fa-check-circle text-6xl text-green-400 mb-4"></i>
                             <h3 class="text-2xl font-bold mb-4">Thank You for Your Review!</h3>
-                            <p class="mb-6 opacity-90">We appreciate your feedback and will use it to improve our service. Your review has been received.</p>
+                            <p class="mb-6 opacity-90">We appreciate your feedback and will use it to improve our
+                                service. Your review has been received.</p>
                         </div>
                     </div>
                 </div>
@@ -368,10 +384,13 @@
                         <li><i class="fas fa-envelope mr-2"></i>team.teevent@gmail.com</li>
                     </ul>
                     <div class="flex space-x-4 mt-4">
-                        <a href="https://wa.me/60123107525" target="_blank" rel="noopener noreferrer" class="text-white hover:text-green-400 transition-colors duration-300">
+                        <a href="https://wa.me/60123107525" target="_blank" rel="noopener noreferrer"
+                            class="text-white hover:text-green-400 transition-colors duration-300">
                             <i class="fab fa-whatsapp text-2xl"></i>
                         </a>
-                        <a href="https://www.instagram.com/team_teevent?utm_source=qr" target="_blank" rel="noopener noreferrer" class="text-white hover:text-pink-400 transition-colors duration-300">
+                        <a href="https://www.instagram.com/team_teevent?utm_source=qr" target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-white hover:text-pink-400 transition-colors duration-300">
                             <i class="fab fa-instagram text-2xl"></i>
                         </a>
                     </div>
@@ -384,23 +403,55 @@
     </footer>
 
     <script>
-        // Form submission handling
-        document.getElementById('reviewForm').addEventListener('submit', function(e) {
-            // Don't prevent default - let the form submit
-            // Just show loading state
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
-            submitBtn.disabled = true;
-            
-            // Reset button after a delay (in case of errors)
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }, 5000);
+        // Form submission
+        document.getElementById('reviewForm').addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent default form submission initially
+
+            // Basic validation
+            const name = document.getElementById('customerName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const reviewText = document.getElementById('reviewText').value.trim();
+
+            // Replace alert with a custom message box if needed, as alerts are not ideal in iframes.
+            // For this example, keeping alert as per original code, but noting the best practice.
+            if (!name || !email || !reviewText) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Get the form element
+            const form = e.target;
+
+            try {
+                // Submit the form data using the FormSubmit service
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json' // Important for FormSubmit AJAX
+                    }
+                });
+
+                if (response.ok) {
+                    // Hide the form and show the confirmation section
+                    document.getElementById('reviewForm').classList.add('hidden');
+                    const confirmationSection = document.getElementById('confirmationSection');
+                    confirmationSection.classList.remove('hidden');
+
+                    // Scroll to the confirmation section
+                    confirmationSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    // Handle non-OK responses from FormSubmit
+                    alert('There was an issue submitting your review. Please try again.');
+                }
+            } catch (error) {
+                // Handle network errors or other exceptions
+                console.error('Error submitting form:', error);
+                alert('An error occurred. Please try again later.');
+            }
         });
 
-        // Close success message
+        // Close success message (this is for the successMessage div, not the confirmationSection)
         document.getElementById('closeSuccess').addEventListener('click', () => {
             document.getElementById('successMessage').classList.add('hidden');
         });
@@ -417,7 +468,7 @@
             });
         });
 
-        // Smooth scrolling and animations
+        // Smooth scrolling and animations for hero-glow (original parallax effect)
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const parallax = document.querySelector('.hero-glow');
