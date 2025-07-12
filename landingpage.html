@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teevent - Custom T-Shirts, Lanyards & More</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .hero-glow {
+            background: radial-gradient(circle at 30% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.3) 0%, transparent 50%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .pulse-cta {
+            animation: pulse-glow 2s infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 107, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(255, 107, 107, 0.5), 0 0 40px rgba(255, 107, 107, 0.3); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .countdown-timer {
+            background: linear-gradient(90deg, #ff6b6b, #ffd93d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .hero-bg {
+            background-image: url('banners/hero-section-mobile.png');
+            background-size: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        @media (min-width: 768px) {
+            .hero-bg {
+                background-image: url('banners/hero-section.png');
+                background-size: auto;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    
+    <!-- Hero Section - ATTENTION -->
+    <section class="min-h-screen relative overflow-hidden hero-bg">
+        <!-- Dark overlay for better text readability -->
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        
+        <div class="relative z-10 container mx-auto px-4 py-16 flex flex-col items-center justify-center min-h-screen text-center">
+            <!-- Logo -->
+            <img src="teevent-logo/footer-logo.png" alt="Teevent" class="h-16 mb-8">
+            
+            <!-- Urgent Banner -->
+            <div class="glass-effect rounded-full px-6 py-2 mb-8 animate-bounce">
+                <span class="text-yellow-300 font-semibold">⚡ Limited Time: 10% OFF First Orders!</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                Custom Event Merch<br>
+                <span class="bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
+                    Made Easy
+                </span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl leading-relaxed opacity-90">
+                From club events to graduation ceremonies - get quality custom t-shirts, lanyards, and other merchandise delivered to your campus in Malaysia
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                <a href="https://wa.me/60123107525?text=Hii%2C%20I%20want%20to%20get%20quote%20for" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 pulse-cta flex items-center justify-center" style="text-decoration: none;">
+                    <i class="fas fa-rocket mr-2"></i>
+                    Get Instant Quote
+                </a>
+                <!-- <button class="glass-effect hover:bg-white hover:bg-opacity-20 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border-2 border-white border-opacity-30">
+                    <i class="fas fa-play mr-2"></i>
+                    See Examples
+                </button> -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Social Proof - University Logos Carousel -->
+    <section class="py-12 bg-gray-900">
+        <div class="w-full">
+            <p class="text-sm mb-4 opacity-75 text-center">Trusted by organizers from your favorite events.</p>
+            <div class="carousel overflow-hidden">
+                <div class="carousel-inner flex w-max animate-scroll">
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/1.png" alt="Event Logo 1" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/2.png" alt="Event Logo 2" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/3.png" alt="Event Logo 3" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/4.png" alt="Event Logo 4" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/5.png" alt="Event Logo 5" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/6.png" alt="Event Logo 6" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/7.png" alt="Event Logo 7" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/8.png" alt="Event Logo 8" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/9.png" alt="Event Logo 9" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/10.png" alt="Event Logo 10" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/11.png" alt="Event Logo 11" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/12.png" alt="Event Logo 12" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/13.png" alt="Event Logo 13" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/14.png" alt="Event Logo 14" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/15.png" alt="Event Logo 15" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/16.png" alt="Event Logo 16" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <!-- Duplicate items for seamless loop -->
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/1.png" alt="Event Logo 1" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/2.png" alt="Event Logo 2" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/3.png" alt="Event Logo 3" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/4.png" alt="Event Logo 4" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/5.png" alt="Event Logo 5" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/6.png" alt="Event Logo 6" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/7.png" alt="Event Logo 7" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/8.png" alt="Event Logo 8" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/9.png" alt="Event Logo 9" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/10.png" alt="Event Logo 10" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/11.png" alt="Event Logo 11" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/12.png" alt="Event Logo 12" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/13.png" alt="Event Logo 13" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/14.png" alt="Event Logo 14" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/15.png" alt="Event Logo 15" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                    <div class="carousel-item text-center flex-shrink-0 mr-6">
+                        <img src="event-logos/16.png" alt="Event Logo 16" class="w-16 h-16 object-contain mx-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Section - INTEREST -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Everything Your Event Needs
+                </h2>
+                <p class="text-xl opacity-75 max-w-2xl mx-auto">
+                    High-quality merchandise that makes your university events unforgettable.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-hover glass-effect rounded-3xl p-8 text-center">
+                    <img src="items-section-1/tshirt.png" alt="Custom T-Shirts" class="w-32 h-32 object-contain mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-4">Custom T-Shirts</h3>
+                    <p class="opacity-75 mb-6">Fully customizable tees with your club logo, event theme, or graduation design.</p>                    
+                </div>
+                
+                <div class="card-hover glass-effect rounded-3xl p-8 text-center">
+                    <img src="items-section-1/lanyard.png" alt="Event Lanyards" class="w-32 h-32 object-contain mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-4">Lanyards</h3>
+                    <p class="opacity-75 mb-6">Durable, high-quality printed lanyards perfect for IDs, badges, and event access.</p>                    
+                </div>
+                
+                <div class="card-hover glass-effect rounded-3xl p-8 text-center">
+                    <img src="items-section-1/canvasbag.png" alt="Canvas Bags" class="w-32 h-32 object-contain mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-4">Canvas Bags</h3>
+                    <p class="opacity-75 mb-6">Stylish, durable canvas bags perfect for events, conferences, and promotional use.</p>                    
+                </div>
+                
+                <div class="card-hover glass-effect rounded-3xl p-8 text-center">
+                    <img src="items-section-1/keychain.png" alt="Custom Keychains" class="w-32 h-32 object-contain mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-4">Custom Keychains</h3>
+                    <p class="opacity-75 mb-6">Personalized acrylic keychains with your logo or event branding.</p>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section - DESIRE -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    What Students Say
+                </h2>
+                <p class="text-xl opacity-75">Real reviews from students organizers</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-effect rounded-2xl p-6">
+                    <div class="mb-4">
+                        <h4 class="font-bold">Aisha Rahman</h4>
+                        <p class="text-sm opacity-75">UM Business Club President</p>
+                    </div>
+                    <div class="text-yellow-400 mb-2">⭐⭐⭐⭐⭐</div>
+                    <p class="opacity-90">"Amazing quality! Our club t-shirts looked exactly like the design preview. Fast delivery to Shah Alam campus too!"</p>
+                </div>
+                
+                <div class="glass-effect rounded-2xl p-6">
+                    <div class="mb-4">
+                        <h4 class="font-bold">Marcus Tan</h4>
+                        <p class="text-sm opacity-75">UTM Engineering Society</p>
+                    </div>
+                    <div class="text-yellow-400 mb-2">⭐⭐⭐⭐⭐</div>
+                    <p class="opacity-90">"Ordered 200 lanyards for our tech conference. Great bulk pricing and they arrived 2 days early!"</p>
+                </div>
+                
+                <div class="glass-effect rounded-2xl p-6">
+                    <div class="mb-4">
+                        <h4 class="font-bold">Sarah Lim</h4>
+                        <p class="text-sm opacity-75">UPM Graduation Committee</p>
+                    </div>
+                    <div class="text-yellow-400 mb-2">⭐⭐⭐⭐⭐</div>
+                    <p class="opacity-90">"Perfect for our graduation ceremony! The custom design process was so easy and the final products were beautiful."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Process Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Simple 3-Step Process
+                </h2>
+                <p class="text-xl opacity-75">From concept to campus delivery in days.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center text-2xl font-bold mb-6 mx-auto">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Choose & Design</h3>
+                    <p class="opacity-75">Select your products and send your design to us.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-pink-400 to-red-400 rounded-full flex items-center justify-center text-2xl font-bold mb-6 mx-auto">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Get Instant Quote</h3>
+                    <p class="opacity-75">Receive pricing with bulk discounts for large orders.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center text-2xl font-bold mb-6 mx-auto">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Fast Delivery</h3>
+                    <p class="opacity-75 mb-2">Free delivery to your campus anywhere in Malaysia within 12-20 days.</p>
+                    <p class="text-xs opacity-60">T&C applies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA Section - ACTION -->
+    <section class="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-6xl font-black mb-6">
+                Ready to Create Something Amazing?
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">
+                Join 20+ university events who trust us.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <button class="bg-white text-purple-600 hover:bg-gray-100 px-10 py-4 rounded-full font-bold text-xl transition-all duration-300 transform hover:scale-105 pulse-cta">                    
+                    Get Your Quote Now
+                </button>
+                
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6 text-sm opacity-75">
+                <div class="flex items-center gap-1">
+                    <i class="fas fa-truck"></i>
+                    <span>Free Campus Delivery</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fas fa-clock"></i>
+                    <span>12-20 Day Turnaround</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fas fa-palette"></i>
+                    <span>Free Design Support</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fas fa-percentage"></i>
+                    <span>Bulk Discounts Available</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="teevent-logo/footer-logo.png" alt="Teevent" class="h-8 mb-4">
+                    <p class="opacity-75">Your trusted partner for university event merchandise across Malaysia.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Products</h4>
+                    <ul class="space-y-2 opacity-75">
+                        <li>Custom T-Shirts</li>
+                        <li>Lanyards</li>
+                        <li>Tote Bags</li>
+                        <li>Keychains</li>
+                        <li>Stickers & Badges</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 opacity-75">
+                        <li><i class="fas fa-phone mr-2"></i>+60 12-310-7525</li>
+                        <li><i class="fas fa-envelope mr-2"></i>team.teevent@gmail.com</li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://wa.me/60123107525" target="_blank" rel="noopener noreferrer" class="text-white hover:text-green-400 transition-colors duration-300">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/team_teevent?utm_source=qr" target="_blank" rel="noopener noreferrer" class="text-white hover:text-pink-400 transition-colors duration-300">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center opacity-75">
+                <p>&copy; 2025 Teevent. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling for CTA buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                if (button.textContent.includes('Get')) {
+                    e.preventDefault();
+                    // Add conversion tracking or form popup logic here
+                    // alert('Quote request form would open here! 🚀'); // This line is removed for the specific button
+                }
+            });
+        });
+        
+        // Add scroll animations
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero-glow');
+            const speed = scrolled * 0.5;
+            parallax.style.transform = `translateY(${speed}px)`;
+        });
+    </script>
+</body>
+</html>
