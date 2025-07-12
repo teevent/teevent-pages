@@ -84,19 +84,43 @@
                 background-size: auto;
             }
         }
+        
+        .review-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 50;
+            transition: all 0.3s ease;
+        }
+        
+        .review-button .button-text {
+            transition: all 0.3s ease;
+            opacity: 1;
+            max-width: 100px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .review-button.scrolled .button-text {
+            opacity: 0;
+            max-width: 0;
+        }
+        
+        .review-button.scrolled {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white overflow-x-hidden">
     
-    <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 p-4">
-        <div class="container mx-auto flex justify-end">
-            <a href="reviewpage.html" class="glass-effect hover:bg-white hover:bg-opacity-20 px-6 py-3 rounded-full font-semibold text-lg transition-all duration-300 border-2 border-white border-opacity-30 flex items-center gap-2">
-                <i class="fas fa-star"></i>
-                Review
-            </a>
-        </div>
-    </nav>
+    <!-- Review Button - Bottom Right -->
+    <div class="review-button" id="reviewButton">
+        <a href="reviewpage.html" class="glass-effect hover:bg-white hover:bg-opacity-20 px-6 py-3 rounded-full font-semibold text-lg transition-all duration-300 border-2 border-white border-opacity-30 flex items-center gap-2">
+            <i class="fas fa-star"></i>
+            <span class="button-text">Review</span>
+        </a>
+    </div>
     
     <!-- Hero Section - ATTENTION -->
     <section class="min-h-screen relative overflow-hidden hero-bg">
@@ -461,6 +485,15 @@
             const parallax = document.querySelector('.hero-glow');
             const speed = scrolled * 0.5;
             parallax.style.transform = `translateY(${speed}px)`;
+
+            // Update review button based on scroll position
+            const reviewButton = document.getElementById('reviewButton');
+            
+            if (scrolled > 100) { // Adjust scroll threshold as needed
+                reviewButton.classList.add('scrolled');
+            } else {
+                reviewButton.classList.remove('scrolled');
+            }
         });
     </script>
 </body>
